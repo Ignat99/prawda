@@ -1,0 +1,17 @@
+I take a letter out.
+I do not take a letter out.
+Do I take a letter out?
+Who take a letter out?
+What do I take out? (нет)
+I say that I take a letter out.
+I say whether I take a letter out.
+It is offer to take a letter out. (нет)
+
+I can take a letter out.
+I can not take a letter out.
+can I take a letter out?
+Who can take a letter out?
+What can I take out? (нет)
+I say that I can take a letter out. (нет)
+I say whether I can take a letter out.
+It is offer to can take a letter out. (нет)

@@ -1,0 +1,49 @@
+ ========== вводные_слова ==========
+-- 10). cxu ankaux vi scias, ke en la Esperanto-klubo estas interese?
+
+--. Unu malsagxulo povas fari tiel multe da demandoj,
+    ke ilin ne povos respondi dek sagxeguloj.
+    Один дурак может задать так много вопросов, что на них не могут ответить 
+    10 мудрецов
+    tiel=так
+
+--. La vivo instruas nur tiujn, kiuj gxin lernas.
+    Жизнь обучает только того, кто хочет учиться.
+    nur=только
+
+-- . Ecx la plej longa tago havas finon.
+     Ecx = даже
+
+-- . Kio farigxis, tio jam ne refarigxos.
+
+-- . La filo ne igxos bona nur tial, ke la patro estas bona.
+     nur = только
+
+-- . Se du homoj faras ecx tute saman laboron, rezulto ne estos sama.
+     ecx=даже
+
+-- . Mi scias nur tion, ke mi scias nenion .
+     nur = только
+     
+-- . La homoj povas esti felicxaj, nur se la felicxo ne estas celo de ilia vivo.
+     nur = только
+
+-- . Vi jam estas ie malproksimege, je miloj da kilometroj de mia urbo.
+     jam = уже
+
+-- . Dufoje oni ne vivas, tamen estas multe da tiaj homoj,
+     kiuj ecx unu fojon ne scipovas vivi.
+     tamen = однако
+
+-- . La homo neniam estas tiel felicxa aux malfelicxa,
+     kiel tio sxajnas al li mem.
+
+-- . Post morto kuracilo jam estas sen utilo.
+
+-- . Ecx el sub la tero aperas la vero.
+
+-- . Ni ankoraux batalos, diablo prenu!.
+     diablo prenu = черт побери!
+
+-- . Ja koni bone la homon signifas koni sin mem .
+     Ja=ведь

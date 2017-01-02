@@ -1,0 +1,16 @@
+@absatz{@Color{0x07}@not_trans{0}@Name{Параграф}@begin{<p>}@end{</p>}}
+@absatz{@Color{0x0f}@not_trans{0}@Name{Заголовок}@begin{<h>}@end{</h>}}
+@absatz{@Color{0x0e}@not_trans{0}@Name{Список}@begin{<i>}@end{</i>}}
+@absatz{@Color{0x0a}@not_trans{1}@Name{Непереводимый}@begin{<i>}@end{</i>}}
+@absatz{@Color{0x0f}@not_trans{0}@Name{Text}
+   @begin{
+   <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+   <html><LINK REV="made"">
+   <title>Переведено программой "Правда", которую написал Дима Анисимов</title>
+   <META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html;charset=koi8-r">
+   <body>
+   }
+   @end{</body></html>}}
+
+
+

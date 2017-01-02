@@ -1,0 +1,17 @@
+I have dinner.
+I have not dinner. (криво)
+Have I dinner?  (криво)
+Who has dinner?
+What have I ? (Не надо)
+I say that I have dinner.
+I say whether I have dinner.
+It is offer to have dinner. (нет)
+
+I can have dinner.
+I can not have dinner.
+Can I have dinner?
+Who can have dinner?
+What can I have?
+I say that I can have dinner.
+I say whether I can have dinner.
+It is offer to can have dinner. (нет)

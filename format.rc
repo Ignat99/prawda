@@ -1,0 +1,8 @@
+//
+//   Файл, задающий возможные выходные форматы
+//
+/etc/format/text            просто_текст
+/etc/format/latex           LaTex
+/etc/format/html            HTML
+
+

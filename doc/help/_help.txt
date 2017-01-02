@@ -1,0 +1,66 @@
+/*************************************************************************/
+//        Новые хелпы
+/*************************************************************************/
+// ------------- Структура ------------------
+1) Новые режимы
+   1) besser.html
+      описание этапов
+      описание меню (и образов)
+   2) format.html
+   3) kontext.html
+      kontext1.html
+   4) setperevod.html
+   5) macrostruct.html
+      hypertext.html (переименовать в macrostruct)
+      flags_frasa.html
+      flags_absatz.html
+   6) frasa
+      frasa.html
+      frasa1.html
+      frasa2.html
+2) Старые режимы
+   edit.html
+   find.html
+   howto.html     (устарел)
+   menu.html      (нуждается в коррекции)
+   newwords1.html (устарел)
+   newwords.html  (устарел)
+   path.html      (будет отменен)
+   slowo1.html
+
+3) Отладочные режимы
+   base_enru.html
+   debug.html
+   first.html     (написано коряво)
+   grammar.html
+   slowo.html
+   src.html
+
+4) Старые подсказки
+   tip0.html  Оглавление подсказок
+   tip1.html  Совет дня
+   tip2.html  Настроечный файл        (устарел)
+   tip3.html  Встроенная Руссификация 
+   tip4.html  Кодировка Win1251       (устарел)
+   tip5.html  Окно выбора вариантов   (устарел)
+   tip6.html  Задание части речи      (устарел)
+   tip7.html  Ввод нового слова       (устарел)
+   tip8.html  Что делать если SegFault
+   tip9.html  Как принятие участия в разработке
+5) Новые подсказки
+
+6) Прочее
+   about.html
+   empty.html
+   help.html
+   index.html   (надо дополнить)
+   windows.html (надо дополнить)
+   slowo3.html  (пустой файл)
+   w_about.html (О программе для редактора)
+ 
+// ------------- Структура ------------------
+     
+   1) Гиперссылки
+   2) Разделы меню
+
+

@@ -1,0 +1,18 @@
+@absatz{@Color{0x07}@not_trans{0}@Name{Параграф}@begin{}@end{}}
+@absatz{@Color{0x0f}@not_trans{0}@Name{Заголовок}@begin{\subsection{}@end{\}}}
+@absatz{@Color{0x0e}@not_trans{0}@Name{Список}@begin{\item}@end{}}
+@absatz{@Color{0x0a}@not_trans{1}@Name{Непереводимый}@begin{\begin{verbatim\}}@end{\end{verbatim\}}}
+@absatz{@Color{0x0f}@not_trans{0}@Name{Text}@begin{
+   \documentclass[11pt]{article\}
+   \usepackage{latexsym\}
+   \usepackage[koi8-r]{inputenc\}
+   \usepackage[russian]{babel\}
+   \usepackage[a4paper]{geometry\}
+   \usepackage{indentfirst\}
+   \begin{document\}
+   \tableofcontents
+}
+@end{
+\end{document\}
+}}
+

@@ -1,0 +1,17 @@
+I write a letter.
+I do not write a letter.
+Do I write a letter? (коряво)
+Who write a letter?
+What do I write?
+I say that I write a letter.
+I say whether I write a letter.
+It is offer to write a letter.
+
+I can write a letter.
+I can not write a letter.
+can I write a letter?
+Who can write a letter?
+What can I write?
+I say that I can write a letter.
+I say whether I can write a letter.
+It is offer to can write a letter. (нет)

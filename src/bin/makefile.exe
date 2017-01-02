@@ -1,0 +1,161 @@
+#---------------------------------------------------------------------------#
+#     makefile.exe for prawda                                               #
+#     Anissimow D.W.                                     1 Martz 1999.      #
+#---------------------------------------------------------------------------#
+# Ужас какой! Это совсем не то файло, которое должно все собрать
+# Тут нет утилит и препроцессоров!
+
+INCLUDES     +=  -I../trans -I../face
+LDFLAGS      +=  -L/usr/X11R6/lib -L/usr/lib
+LDLIBS        =  -lncurses
+
+COMP =  g++ -g -c $(INCLUDES)
+LINK =  g++ -g
+
+OBJS_EDIT =\
+ ../obj/main.o\
+ ../obj/common.o\
+ ../obj/debug.o\
+ ../obj/dictmgr.o\
+ ../obj/dir.o\
+ ../obj/edit.o\
+ ../obj/edit1.o\
+ ../obj/edit2.o\
+ ../obj/help.o\
+ ../obj/option.o\
+ ../obj/slowo.o\
+ ../obj/slowo1.o\
+ ../obj/text.o\
+ ../obj/menu.o\
+ ../obj/window.o\
+ ../obj/windows.o\
+ ../obj/macrostruct.o\
+ ../obj/macrostruct2.o\
+ ../obj/kontext.o\
+ ../obj/kontext2.o\
+ ../obj/word.o
+
+OBJS_TRANS =\
+ ../obj/core.o\
+ ../obj/core1.o\
+ ../obj/grammar.o\
+ ../obj/koi9.o\
+ ../obj/lexer.o\
+ ../obj/mylib.o\
+ ../obj/semantika.o\
+ ../obj/slowo2.o\
+ ../obj/slowo3.o
+
+OBJS_UTIL =\
+ ../obj/grammar.o\
+ ../obj/lexer.o\
+ ../obj/mylib.o\
+ ../obj/slowo2.o\
+ ../obj/slowo3.o
+
+# Standard target.
+
+all : prawda
+utils :  zdicts_gender  zdicts_fverb  zdicts_compress  zdicts_strip
+
+.SUFFIXES: .o .cpp $(SUFFIXES)
+
+# ----- главные программы ----------------------------------
+prawda:  $(OBJS_EDIT) $(OBJS_TRANS) ../obj/video_x.o
+	$(LINK) -o prawda $(OBJS_EDIT) $(OBJS_TRANS) ../obj/video_x.o $(LDFLAGS) -lX11
+
+# ----- утилиты для словарей --------------------------------
+zdicts_compress: ../utils/zdicts_compress.cpp
+	g++ -g -I../trans -o zdicts_compress ../utils/zdicts_compress.cpp
+zdicts_fverb: ../obj/zdicts_fverb.o
+	$(LINK) -o zdicts_fverb ../obj/zdicts_fverb.o
+zdicts_gender: ../obj/zdicts_gender.o $(OBJS_UTIL)
+	$(LINK) -o zdicts_gender ../obj/zdicts_gender.o $(OBJS_UTIL)
+zdicts_strip: ../obj/zdicts_strip.o $(OBJS_UTIL)
+	$(LINK) -o zdicts_strip ../obj/zdicts_strip.o $(OBJS_UTIL)
+
+../obj/koi9.o: ../face/koi9.cpp
+	$(COMP) -o ../obj/koi9.o ../face/koi9.cpp
+../obj/grammar.o: ../trans/grammar.cpp ../trans/grammar1.cpp
+	$(COMP) -o ../obj/grammar.o ../trans/grammar.cpp
+../obj/lexer.o: ../trans/lexer.cpp
+	$(COMP) -o ../obj/lexer.o ../trans/lexer.cpp
+../obj/mylib.o: ../trans/mylib.cpp
+	$(COMP) -o ../obj/mylib.o ../trans/mylib.cpp
+../obj/core.o: ../trans/core.cpp
+	$(COMP) -o ../obj/core.o ../trans/core.cpp
+../obj/core1.o: ../trans/core1.cpp
+	$(COMP) -o ../obj/core1.o ../trans/core1.cpp
+../obj/slowo2.o: ../trans/slowo2.cpp
+	$(COMP) -o ../obj/slowo2.o ../trans/slowo2.cpp
+../obj/slowo3.o: ../trans/slowo3.cpp
+	$(COMP) -o ../obj/slowo3.o ../trans/slowo3.cpp
+../obj/semantika.o: ../trans/semantika.cpp
+	$(COMP) -o ../obj/semantika.o ../trans/semantika.cpp
+
+../obj/macrostruct.o: ../face/macrostruct.cpp
+	$(COMP) -o ../obj/macrostruct.o ../face/macrostruct.cpp
+../obj/macrostruct2.o: ../face/macrostruct2.cpp
+	$(COMP) -o ../obj/macrostruct2.o ../face/macrostruct2.cpp
+../obj/kontext.o: ../face/kontext.cpp
+	$(COMP) -o ../obj/kontext.o ../face/kontext.cpp
+../obj/kontext2.o: ../face/kontext2.cpp
+	$(COMP) -o ../obj/kontext2.o ../face/kontext2.cpp
+../obj/common.o: ../face/common.cpp
+	$(COMP) -o ../obj/common.o ../face/common.cpp
+../obj/dictmgr.o: ../face/dictmgr.cpp
+	$(COMP) -o ../obj/dictmgr.o ../face/dictmgr.cpp
+../obj/dir.o: ../face/dir.cpp
+	$(COMP) -o ../obj/dir.o ../face/dir.cpp
+../obj/edit.o: ../face/edit.cpp
+	$(COMP) -o ../obj/edit.o ../face/edit.cpp
+../obj/edit1.o: ../face/edit1.cpp
+	$(COMP) -o ../obj/edit1.o ../face/edit1.cpp
+../obj/edit2.o: ../face/edit2.cpp
+	$(COMP) -o ../obj/edit2.o ../face/edit2.cpp
+../obj/allocator.o: ../face/allocator.cpp
+	$(COMP) -o ../obj/allocator.o ../face/allocator.cpp
+../obj/help.o: ../face/help.cpp
+	$(COMP) -o ../obj/help.o ../face/help.cpp
+../obj/debug.o: ../face/debug.cpp
+	$(COMP) -o ../obj/debug.o ../face/debug.cpp
+../obj/path.o: ../face/path.cpp
+	$(COMP) -o ../obj/path.o ../face/path.cpp
+../obj/slowo.o: ../face/slowo.cpp
+	$(COMP) -o ../obj/slowo.o ../face/slowo.cpp
+../obj/slowo1.o: ../face/slowo1.cpp
+	$(COMP) -o ../obj/slowo1.o ../face/slowo1.cpp
+../obj/option.o: ../face/option.cpp
+	$(COMP) -o ../obj/option.o ../face/option.cpp
+../obj/text.o: ../face/text.cpp
+	$(COMP) -o ../obj/text.o ../face/text.cpp
+../obj/menu.o: ../face/menu.cpp
+	$(COMP) -o ../obj/menu.o ../face/menu.cpp
+../obj/main.o: ../face/main.cpp
+	$(COMP) -o ../obj/main.o ../face/main.cpp
+../obj/main_edit.o: ../face/main_edit.cpp
+	$(COMP) -o ../obj/main_edit.o ../face/main_edit.cpp
+../obj/word.o: ../face/word.cpp
+	$(COMP) -o ../obj/word.o ../face/word.cpp
+../obj/word1.o: ../face/word1.cpp
+	$(COMP) -o ../obj/word1.o ../face/word1.cpp
+../obj/window.o: ../face/window.cpp
+	$(COMP) -o ../obj/window.o ../face/window.cpp
+../obj/windows.o: ../face/windows.cpp
+	$(COMP) -o ../obj/windows.o ../face/windows.cpp
+../obj/video_t.o: ../face/video_t.cpp
+	$(COMP) -o ../obj/video_t.o ../face/video_t.cpp
+../obj/video_x.o: ../face/video_x.cpp
+	$(COMP) -o ../obj/video_x.o ../face/video_x.cpp
+../obj/deutsch.o: ../face/deutsch.cpp
+	$(COMP) -o ../obj/deutsch.o ../face/deutsch.cpp
+
+../obj/zdicts_fverb.o: ../utils/zdicts_fverb.cpp
+	$(COMP) -o ../obj/zdicts_fverb.o ../utils/zdicts_fverb.cpp
+../obj/zdicts_gender.o: ../utils/zdicts_gender.cpp
+	$(COMP) -o ../obj/zdicts_gender.o ../utils/zdicts_gender.cpp
+../obj/zdicts_strip.o: ../utils/zdicts_strip.cpp
+	$(COMP) -o ../obj/zdicts_strip.o ../utils/zdicts_strip.cpp
+
+
+# ----------------------------- EOF -------------------------------------

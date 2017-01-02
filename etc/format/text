@@ -1,0 +1,10 @@
+@absatz{@Color{0x07}@not_trans{0}@Name{Параграф}@begin{}@end{}}
+@absatz{@Color{0x0f}@not_trans{0}@Name{Заголовок}
+   @begin{/************************************************************************/ }
+   @end{/************************************************************************/ }}
+@absatz{@Color{0x0e}@not_trans{0}@Name{Список}@begin{}@end{}}
+@absatz{@Color{0x0a}@not_trans{1}@Name{Непереводимый}@begin{}@end{}}
+@absatz{@Color{0x0f}@not_trans{0}@Name{Text}@begin{}@end{}}
+
+
+

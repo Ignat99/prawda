@@ -1,0 +1,69 @@
+// ----------------------------------------.
+I am to read a book.
+I am to be red.
+I am going to read a book.
+I am going to be red.
+
+I have you read a book. (Не ндравтца).
+
+I can read a book.
+I could read a book.
+I will be able !to! read a book.
+I must read a book.
+I may read a book.
+I need read a book.
+I ought !to! read a book.
+I have to read a book.
+
+// --------- пассивных форм нет -------------.
+
+// --------- простые вопросы ----------------.
+Am I to read a book?
+Am I to be red?
+Am I going to read a book?
+Am I going to be red?
+
+Have I you read a book?  (Не ндравтца).
+
+Can I read a book?
+Could I read a book?
+Will I be able !to! read a book?
+Must I read a book?
+May I read a book?
+Need I read a book?
+Ought I !to! read a book?
+Do I have to read a book?
+
+// ---------- вопрос к подлежащему ------------.
+Who is to read a book?
+Who is to be red?
+Who is gouing to read a book?
+Who is going to be red?
+
+Who has you read a book? (Не ндравтца).
+
+Who can read a book?
+Who could read a book?
+Who will be able !to! read a book?
+Who must read a book?
+Who may read a book?
+Who need read a book?
+Who ought !to! read a book?
+Who has to read a book?
+
+// --------- вопрос к дополнению --------------.
+What I am to read.
+What I am to be.
+What I am going to read.
+What I am going to be.
+
+What I have you read. (Не ндравтца).
+
+What can I read.
+What could I read?
+What will I be able to read?
+What must I read?
+What may I read?
+What do I need to read?
+What should I read?
+What do I have to read?

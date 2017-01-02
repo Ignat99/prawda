@@ -1,0 +1,493 @@
+\##{ Mercury_Preprocessor_File }
+\## { .TH  man 1 "September 2, 1995"
+}
+\## { .LO  1
+}
+\## { .SH  NAME
+}
+
+\@@ { man \- format and display the on-line manual pages
+\## { .br } 
+manpath \- determine user's search path for man pages
+}
+\## { .SH  SYNOPSIS
+}
+
+\@@ { man [\-acdfFhkKtwW] [\-m system] [\-p string] [\-C config_file] [\-M path]
+[\-P pager] [\-S section_list] [section] name ...}
+\## { .SH  DESCRIPTION
+}
+
+\@@ { \@= сущ { .B  man
+}
+formats and displays the on-line manual pages.}  
+\@@ { This version knows
+about the
+\@= сущ { .B  MANPATH
+}
+and
+\@= сущ { .B  (MAN)PAGER
+}
+environment variables, so you can have
+your own set(s) of personal man pages and choose whatever program you
+like to display the formatted pages.}  
+\@@ { If
+\@= сущ { .I  section
+}
+is specified,
+\@= сущ { .B  man
+}
+only looks in that section of the manual.}
+
+\@@ { You may also specify the order to search the sections for entries
+and which preprocessors to run on the source files via command line options
+or environment variables.}
+
+\@@ { If
+\@= сущ { .I  name
+}
+contains a / then it is first tried as a filename, so that you can do
+\@= сущ { .B  "man ./foo.5"
+}
+or even
+\@= сущ { .B  "man /cd/foo/bar.1.gz\fR.\fP } "
+}
+\## { .SH  OPTIONS
+}
+\## { .TP 
+}
+
+\@@ { \@= сущ { .B  \-\^C " config_file"
+}
+Specify the man.conf file to use.} 
+\@@ { the default is
+\@= сущ { .B R /etc/man.config .}
+}
+
+\@@ { (See
+\@= сущ { .B R man.conf (5).)
+}
+}
+\## { .TP 
+}
+
+\@@ { \@= сущ { .B  \-\^M " path"
+}
+Specify the list of directories to search for man pages.}
+
+\@@ { If no such option is given, the environment variable
+\@= сущ { .B  MANPATH
+}
+is used.} 
+\@@ { If no such environment variable is found, the default list
+is found by consulting
+\@= сущ { .B R /etc/man.config .}
+}
+
+\@@ { An empty substring of
+\@= сущ { .B  MANPATH
+}
+denotes the default list.}
+\## { .TP 
+}
+
+\@@ { \@= сущ { .B  \-\^P " pager"
+}
+Specify which pager to use.} 
+
+\@@ { This option overrides the
+\@= сущ { .B  MANPAGER
+}
+environment variable, which in turn overrides the
+\@= сущ { .B  PAGER
+}
+variable.}  
+\@@ { By default,
+\@= сущ { .B  man
+}
+uses
+\@= сущ { .B R /usr/bin/less -isr .}
+}
+\## { .TP 
+}
+
+\@@ { \@= сущ { .B  \-\^S " section_list"
+}
+List is a colon separated list of manual sections to search.}
+
+\@@ { This option overrides the
+\@= сущ { .B  MANSECT
+}
+environment variable.}
+\## { .TP 
+}
+
+\@@ { \@= сущ { .B  \-\^a
+}
+By default,
+\@= сущ { .B  man
+}
+will exit after displaying the first manual page it
+finds.}  
+\@@ { Using this option forces
+\@= сущ { .B  man
+}
+to display all the manual pages that match
+\@= сущ { .B  name, 
+}
+not just the first.}
+\## { .TP 
+}
+
+\@@ { \@= сущ { .B  \-\^c
+}
+Reformat the source man page, even when an up-to-date cat page exists.}
+
+\@@ { This can be meaningful if the cat page was formatted for a screen
+with a different number of columns, or if the preformatted page
+is corrupted.}
+\## { .TP 
+}
+
+\@@ { \@= сущ { .B  \-\^d
+}
+Don't actually display the man pages, but do print gobs of debugging
+information.}
+\## { .TP 
+}
+
+\@@ { \@= сущ { .B  \-\^D
+}
+Both display and print debugging info.}
+\## { .TP 
+}
+
+\@@ { \@= сущ { .B  \-\^f
+}
+Equivalent to
+\@= сущ { .B R whatis .}
+}
+\## { .TP 
+}
+
+\@@ { \@= сущ { .B R \-\^F " or " \-\-preformat
+}
+Format only - do not display.}
+\## { .TP 
+}
+
+\@@ { \@= сущ { .B  \-\^h
+}
+Print a one-line help message and exit.}
+\## { .TP 
+}
+
+\@@ { \@= сущ { .B  \-\^k
+}
+Equivalent to
+\@= сущ { .B R apropos .}
+}
+\## { .TP 
+}
+
+\@@ { \@= сущ { .B  \-\^K
+}
+Search for the specified string in *all* man pages.} 
+\@@ { Warning: this is
+probably very slow.} 
+\@@ { It helps to specify a section.}
+
+\@@ { (Just to give a rough idea, on my machine this takes about a minute
+per 500 man pages.)
+}
+\## { .TP 
+}
+
+\@@ { \@= сущ { .B  \-\^m " system"
+}
+Specify an alternate set of man pages to search based on the system
+name given.}
+\## { .TP 
+}
+
+\@@ { \@= сущ { .B  \-\^p " string"
+}
+Specify the sequence of preprocessors to run before
+\@= сущ { .B  nroff
+}
+or
+\@= сущ { .B R troff .}
+}
+
+\@@ { Not all installations will have a full set of preprocessors.}
+
+\@@ { Some of the preprocessors and the letters used to designate them are: 
+eqn (e), grap (g), pic (p), tbl (t), vgrind (v), refer (r).}
+
+\@@ { This option overrides the
+\@= сущ { .B  MANROFFSEQ
+}
+environment variable.}
+\## { .TP 
+}
+
+\@@ { \@= сущ { .B  \-\^t
+}
+Use
+\@= сущ { .B  /usr/bin/groff -Tps -mandoc
+}
+to format the manual page, passing the output to 
+\@= сущ { .B  stdout.}
+}
+
+\@@ { The output from
+\@= сущ { .B  /usr/bin/groff -Tps -mandoc
+}
+may need to be passed through some filter or another before being
+printed.}
+\## { .TP 
+}
+
+\@@ { \@= сущ { .B  \-\^w \fRor\fP }  \-\-path
+Don't actually display the man pages, but do print the location(s) of
+the files that would be formatted or displayed.} 
+\@@ { If no argument is given:
+display (on stdout) the list of directories that is searched by
+\@= сущ { .B  man
+}
+for man pages.} 
+\@@ { If
+\@= сущ { .B  manpath
+}
+is a link to man, then "manpath" is equivalent to "man --path".}
+\## { .TP 
+}
+
+\@@ { \@= сущ { .B  \-\^W
+}
+Like \-\^w, but print file names one per line, without additional information.}
+
+\@@ { This is useful in shell commands like
+}
+\## { .ft  CW
+}
+
+\@@ { \@= сущ { .B  "man -aW man | xargs ls -l"
+}
+}
+\## { .ft 
+}
+
+\## { .SH  "CAT PAGES"
+}
+
+\@@ { Man will try to save the formatted man pages, in order to save
+formatting time the next time these pages are needed.}
+
+\@@ { Traditionally, formatted versions of pages in DIR/manX are
+saved in DIR/catX, but other mappings from man dir to cat dir
+can be specified in
+\@= сущ { .B R /etc/man.config .}
+}
+
+\@@ { No cat pages are saved when the required cat directory does not exist.}
+\## { .PP 
+}
+
+\@@ { It is possible to make
+\@= сущ { .B  man
+}
+suid to a user man.} 
+\@@ { Then, if a cat directory
+has owner man and mode 0755 (only writable by man), and the cat files
+have owner man and mode 0644 or 0444 (only writable by man, or not
+writable at all), no ordinary user can change the cat pages or put
+other files in the cat directory.} 
+\@@ { If
+\@= сущ { .B  man
+}
+is not made suid, then a cat directory should have mode 0777
+if all users should be able to leave cat pages there.}
+\## { .PP 
+}
+
+\@@ { The option
+\@= сущ { .B  \-c
+}
+forces reformatting a page, even if a recent cat page exists.}
+
+
+\## { .SH  ENVIRONMENT
+}
+\## { .TP 
+}
+
+\@@ { \@= сущ { .B  MANPATH
+}
+If
+\@= сущ { .B  MANPATH
+}
+is set, its value is used as the path to search for manual pages.}
+\## { .TP 
+}
+
+\@@ { \@= сущ { .B  MANPL
+}
+If
+\@= сущ { .B  MANPL
+}
+is set, its value is used as the display page length.}
+
+\@@ { Otherwise, the entire man page will occupy one (long) page.}
+\## { .TP 
+}
+
+\@@ { \@= сущ { .B  MANROFFSEQ
+}
+If
+\@= сущ { .B  MANROFFSEQ
+}
+is set, its value is used to determine the set of preprocessors run
+before running
+\@= сущ { .B  nroff
+}
+or
+\@= сущ { .B R troff .}
+}
+
+\@@ { By default, pages are passed through
+the table preprocessor before
+\@= сущ { .B R nroff .}
+}
+\## { .TP 
+}
+
+\@@ { \@= сущ { .B  MANSECT
+}
+If
+\@= сущ { .B  MANSECT
+}
+is set, its value is used to determine which manual sections to search.}
+\## { .TP 
+}
+
+\@@ { \@= сущ { .B  MANWIDTH
+}
+If
+\@= сущ { .B  MANWIDTH
+}
+is set, its value is used as the width manpages should be displayed.}
+
+\@@ { Otherwise the pages may be displayed over the whole width of your
+screen.}
+\## { .TP 
+}
+
+\@@ { \@= сущ { .B  MANPAGER
+}
+If
+\@= сущ { .B  MANPAGER
+}
+is set, its value is used as the name of the program to use to display
+the man page.}  
+\@@ { If not, then
+\@= сущ { .B  PAGER
+}
+is used.} 
+\@@ { If that has no value either,
+\@= сущ { .B  /usr/bin/less -isr
+}
+is used.}
+\## { .TP 
+}
+
+\@@ { \@= сущ { .B  LANG
+}
+If
+\@= сущ { .B  LANG
+}
+is set, its value defines the name of the subdirectory where man
+first looks for man pages.} 
+\@@ { Thus, the command `LANG=dk man 1 foo'
+will cause man to look for the foo man page in ...}
+\@@ { /dk/man1/foo.1,
+and if it cannot find such a file, then in ...}
+\@@ { /man1/foo.1,
+where ...} 
+\@@ { is a directory on the search path.}
+\## { .TP 
+}
+
+\@@ { \@= сущ { .B  "NLSPATH, LC_MESSAGES, LANG"
+}
+The environment variables
+\@= сущ { .B  NLSPATH
+}
+and
+\@= сущ { .B  LC_MESSAGES
+}
+(or
+\@= сущ { .B  LANG
+}
+when the latter does not exist)
+play a role in locating the message catalog.}
+
+\@@ { (But the English messages are compiled in, and for English no catalog
+is required.)
+Note that programs like col(1) called by man also use e.g.} 
+\@@ { LC_CTYPE.}
+\## { .TP 
+}
+
+\@@ { \@= сущ { .B  PATH
+}
+\@= сущ { .B  PATH
+}
+is used in the construction of the default search path for man pages.}
+\## { .TP 
+}
+
+\@@ { \@= сущ { .B  SYSTEM
+}
+\@= сущ { .B  SYSTEM
+}
+is used to get the default alternate system name (for use
+with the
+\@= сущ { .B  \-m
+}
+option).} 
+\## { .SH  "SEE ALSO"
+}
+
+\@@ { apropos(1), whatis(1), less(1), groff(1).}
+\## { .SH  BUGS
+}
+
+\@@ { The
+\@= сущ { .B  \-t
+}
+option only works if a troff-like program is installed.}
+\## { .br } 
+
+\@@ { If you see blinking \e255 or <AD> instead of hyphens,
+put `LESSCHARSET=latin1' in your environment.}
+\## { .SH  TIPS
+}
+
+\@@ { If you add the line
+
+  (global-set-key [(f1)] (lambda () (interactive) (manual-entry (current-word))))
+
+to your
+\@= сущ { .I R .emacs 
+}
+file, then hitting F1 will give you the man page for the library call
+at the current cursor position.}
+\## { .LP } 
+
+\@@ { To get a plain text version of a man page, without backspaces
+and underscores, try
+
+  # man foo | col -b > foo.mantxt
+
+}

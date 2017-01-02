@@ -1,0 +1,17 @@
+I am a table.
+I am not a table.
+Am I a table? (кривовато)
+Who is a table?
+What Am I ?
+I say that I am a table.
+I say whether I am a table. (кривовато)
+It is offer to be a table. (кривовато)
+
+I can be a table.
+I can not be a table.
+Can I be a table?
+Who can be a table?
+What can I be? (нет)
+I say that I can be a table.
+I say whether I can be a table. (нет)
+It is offer to can be a table. (нет)

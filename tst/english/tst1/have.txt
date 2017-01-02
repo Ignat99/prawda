@@ -1,0 +1,17 @@
+I have a table.
+I have not a table.
+have I a table?
+Who has a table? (нет)
+What have I ? (нет)
+I say that I have a table.
+I say whether I have a table.
+It is offer to have a table. (не то)
+
+I can have a table.
+I can not have a table.
+Can I have a table?
+Who can have a table?
+What can I have? (нет)
+I say that I can have a table.
+I say whether I can have a table.
+It is offer to can have a table. (нет)
