@@ -1,0 +1,2 @@
+# prawda
+prawda-translator
